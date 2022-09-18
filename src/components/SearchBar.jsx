@@ -1,9 +1,35 @@
-import React from 'react'
+import React from 'react';
+
+import { IconButton, Paper } from '@mui/material';
+import { Search } from '@mui/icons-material';
 
 const SearchBar = () => {
   return (
-    <div>SearchBar</div>
-  )
+    <Paper
+     component='form'
+     sx={{
+        borderRadius: 20,
+        border: '1px solid #e3e3e3',
+        pl: 2,
+        boxShadow: 'none',
+        mr: {sm: 5}
+     }}
+    >
+        <input
+         className='search-bar'
+         placeholder='Search...'
+         />
+        <IconButton
+         type='submit'
+         sx={{
+            p: '10px', color: 'red'
+         }}
+         aria-label='search'
+        >
+            <Search />
+        </IconButton>
+    </Paper>
+  );
 }
 
-export default SearchBar
+export default SearchBar;
